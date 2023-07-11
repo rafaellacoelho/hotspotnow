@@ -1,0 +1,60 @@
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+/* IMAGEM */
+
+.image-container {
+    background-color: #AE8DBD;
+    height: 100vh;
+}
+
+/* FORM */
+.form-container h1 {
+    color: #70119C;
+}
+
+.form-container a {
+    color: #222;
+    transition: .5s;
+}
+
+.form-container a:hover {
+    color: #6c63ff;
+}
+
+.form-container .input-container {
+    border-bottom: 1px solid #70119C;
+}
+
+.form-container .input-container .form-control {
+    border: none;
+    background-color: transparent;
+}
+
+.form-container .input-container .icon {
+    color: #70119C;
+}
+
+.form-container .input-container .form-control:focus {
+    box-shadow: none;
+}
+
+.form-container input[type="submit"] {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+.form-container .button-submit {
+    color: #fff;
+    background-color: #70119C;
+}
