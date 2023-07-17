@@ -1,8 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+body {
+    background-color: #f5f5f5;
+}
+  
+/* Sidebar */
+.sidebar {
+  background-color: #F3F3FB;
+}
 
+.sidebar {
+  width: 300px;
+}
 
+.sidebar .nav-link {
+  background-color: #FBFAFF;
+}
 
+.sidebar .nav-link .nav-icon {
+  color: #828282;
+}
 
+.sidebar .nav-link:hover .nav-icon {
+  color: #70119C;
+}
+
+/* Dashboard title */
+.dashboard-tile h2 {
+    color: #70119C;
+}
+
+/* Card Connections */
+.card-container {
+    background: #FBFAFF;
+    box-shadow: 0px 2px 8px 0px rgba(91, 116, 134, 0.25);
+    color: #383737;
+}
+
+.card-connections-container p {
+    color: #646464;
+}
+
+.card-connections-container p .icon-card {
+    width: 20px
+}
+
+.card-connections-container h3 {
+    color: #5A2357;
+}
+
+.card-connections-container h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #5A2357;
+}
 
 @import url("login.css");
