@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-@import url("login.css");
+/* @import url("login.css"); */
 
 body {
-    background-color: #f5f5f5;
+    background-color: #FFF;
 }
   
 /* Sidebar */
@@ -11,19 +11,17 @@ body {
   background-color: #F3F3FB;
 }
 
-.sidebar {
-  width: 300px;
-}
-
-.sidebar .nav-link {
+.sidebar .nav-item:not(:first-child):hover {
   background-color: #FBFAFF;
+  border-radius: 6px;
 }
 
-.sidebar .nav-link .nav-icon {
+.sidebar .nav-item .nav-icon {
   color: #828282;
+  stroke-width: 2.7;
 }
 
-.sidebar .nav-link:hover .nav-icon {
+.sidebar .nav-item:hover .nav-icon {
   color: #70119C;
 }
 

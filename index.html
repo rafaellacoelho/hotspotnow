@@ -18,70 +18,66 @@
 
   <div class="d-flex" id="wrapper">
 
-    <header class="sidebar px-3 pt-2" id="sidebar">
-      <div class="logo">
-          <h1>
-              <a href="">
-                  <img src="src/img/logo.png" style="width: 25px;">
-              </a>
-          </h1>
-      </div>
-      <nav class="d-flex flex-column min-vh-100 align-items-start navbar">            
-          <ul class="nav nav-pills flex-column align-items-center">
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="bar-chart"></i>
-                      <span class="d-none">Dashboard</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="users"></i>
-                      <span class="d-none">Usuários</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="map"></i>
-                      <span class="d-none">Módulos</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="layers"></i>
-                      <span class="d-none">Relatórios</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="lock"></i>
-                      <span class="d-none">Segurança</span>
-                  </a>
-              </li>
-          </ul>
-          
-          <ul class="nav nav-pills flex-column align-items-center profile">
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="refresh-cw"></i>
-                      <span class="d-none">Trocar perfil</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="bar-chart"></i>
-                      <span class="d-none">Rafaella Coelho</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a href="" class="nav-link align-middle px-0">
-                      <i class="nav-icon" data-feather="power"></i>
-                      <span class="d-none">Sair</span>
-                  </a>
-              </li>
-          </ul>
-      </nav>
-  </header>
+    <header class="d-flex flex-column justify-content-between sidebar">
+      <ul class="navbar nav nav-pills flex-column text-center">
+        <li class="nav-item mb-3">
+          <a href="#" class="nav-link">
+            <img src="src/img/logo.png" aria-label="Home">
+          </a>
+        </li>
+        <li class="nav-item mb-3">
+          <a href="#" class="nav-link">
+            <i data-feather="bar-chart" class="nav-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-3">
+          <a href="#" class="nav-link">
+            <i data-feather="users" class="nav-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-3">
+          <a href="#" class="nav-link">
+            <i data-feather="map" class="nav-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-3">
+          <a href="#" class="nav-link">
+            <i data-feather="layers" class="nav-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="lock" class="nav-icon"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav nav-pills flex-column text-center">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="refresh-cw" class="nav-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class=" d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none">
+            <img src="https://github.com/mdo.png" alt="mdo" width="28" height="28" class="rounded-circle">
+          </a>
+          <!-- 
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-headerider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul> -->
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="power" class="nav-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </header>
 
     <main class="container-fluid px-4">
 
