@@ -58,4 +58,20 @@ body {
     background-color: #5A2357;
 }
 
+/* Card Log */
+.log-content .log-item {
+  background-color: #F2F2F7;
+  font-size: 14px;
+}
 
+.log-content .log-item .log-icon {
+  width: 18px;
+}
+
+.log-content .log-item .log-icon.atention{
+  color: #FF0000;
+}
+
+.log-content .log-item .log-icon.check{
+  color: #00AC4F;
+}
