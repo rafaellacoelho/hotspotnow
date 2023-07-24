@@ -1,11 +1,15 @@
 feather.replace()
 
+
     let barChart = document.getElementById('barChart').getContext('2d');
+    let pizzaChart = document.getElementById('pizzaChart').getContext('2d');
+    let doughnutChart = document.getElementById('barChart').getContext('2d');
 
-    const image = new Image();
-    image.src = "../img/Vector.png"
+    // image object
+    const image = new Image(8,8);
+    image.src = '../src/img/vector.png'
 
-    // CHART
+    // BAR CHART
     const xValues = [
       "14/08",
       "15/08",
@@ -45,6 +49,25 @@ feather.replace()
         plugins: {
           legend: {
             display: false,
+          },
+          tooltip: {
+            yAlign: 'bottom',
+            usePointStyle: true,
+            padding: {
+              x: 15,
+              y: 4
+            },
+            callbacks: {
+              title: function() {
+                  return '';
+              },
+              labelPointStyle: (context) => {
+                return {
+                  pointStyle: image,                  
+                }
+              }
+            },
+            
           }
         },
         scales: {
@@ -76,16 +99,18 @@ feather.replace()
       }
     });
 
+    
+
+    // Pizza Charts
+
     yValues = [706, 135, 591, 284, 105, 110]
 
-    // Create an instance of Chart object:
-    const PizzaChart = new Chart('PizzaChart', {
-      type: 'pie', //Declare the chart type
+    let PizzaChart = new Chart('pizzaChart', {
+      type: 'pie', 
       data: {
-        labels: yValues, //Defines each segment
+        labels: yValues, 
         datasets: [{
-          data: yValues, //Determines segment size
-          //Color of each segment
+          data: yValues, 
           backgroundColor: [
             "#5A2357",
             "#7B2869",
@@ -93,24 +118,50 @@ feather.replace()
             "#C85C8E",
             "#FFBABA",
             "#FFE0E0"],
-        }]
+        }],
       },
       options: {
         animation: {
           duration: 2000,
         },
         plugins: {
+          tooltip: {
+            enabled: false,
+          },
+          labels: {
+            position: 'outside',
+            render: 'value',
+            textMargin: 6
+          },
           legend: {
-            display: false,
+            display: false
           }
         }
-      }
+      },     
     });
 
-
+    // Doughnut Chart
     zValues = [167,120]
 
-    // Create an instance of Chart object:
+    const doughnutLabel = {
+      id: 'doughnutLabel',
+      beforeDatasetsDraw(chart, args, pluginOptions) {
+        const {ctx, data} = chart;
+
+        ctx.save();
+        const xCoor = chart.getDatasetMeta(0).data[0].x;
+        const yCoor = chart.getDatasetMeta(0).data[0].y;
+
+        ctx.font = '30px Poppins';
+        ctx.fillStyle = '#383737';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle'
+        ctx.fillText(zValues[0] + zValues[1], xCoor, yCoor - 15);
+        ctx.fillText('Total', xCoor, yCoor + 25);
+
+      }
+    }
+
     const DonnutChart = new Chart('DonnutChart', {
       type: 'doughnut', //Declare the chart type
       data: {
@@ -127,10 +178,6 @@ feather.replace()
         animation: {
           duration: 2000,
         },
-        plugins: {
-          legend: {
-            display: false,
-          }
-        }
-      }
+      },
+      plugins: [doughnutLabel]
     });

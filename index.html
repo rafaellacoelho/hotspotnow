@@ -16,12 +16,12 @@
 
 <body>
 
-  <div class="d-flex" id="wrapper">
+  <div class="d-flex vh-100" id="wrapper">
 
-    <header class="d-flex flex-column justify-content-between sidebar">
+    <header class="d-flex flex-column justify-content-between sidebar side-menu">
       <ul class="navbar nav nav-pills flex-column text-center">
-        <li class="nav-item mb-3">
-          <a href="#" class="nav-link">
+        <li class="nav-item mb-3 border-bottom">
+          <a href="#" class="nav-link mb-3">
             <img src="src/img/logo.png" aria-label="Home">
           </a>
         </li>
@@ -52,14 +52,14 @@
         </li>
       </ul>
 
-      <ul class="nav nav-pills flex-column text-center">
+      <ul class="navbar nav flex-column text-center">
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i data-feather="refresh-cw" class="nav-icon"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class=" d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none">
+          <a href="#" class="nav-link">
             <img src="https://github.com/mdo.png" alt="mdo" width="28" height="28" class="rounded-circle">
           </a>
           <!-- 
@@ -206,12 +206,12 @@
         </div>
 
         <div class="col-md-4">
-          <div class="px-4 py-3 rounded-4 card-container">
+          <div class="px-4 py-3 rounded-3 card-container">
             <div class="card-content">
               <h4 class="fs-6 fw-bold">Conexão por roteador</h4>
 
               <div class="root-connections-chart p-2 d-flex">
-                <canvas id="PizzaChart"></canvas>
+                <canvas id="pizzaChart"></canvas>
               </div>
             </div>
           </div>
@@ -311,6 +311,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
   <script src="src/js/script.js"></script>
 </body>
 

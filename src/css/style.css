@@ -11,7 +11,8 @@ body {
   background-color: #F3F3FB;
 }
 
-.sidebar .nav-item:not(:first-child):hover {
+.sidebar .nav-item:hover,
+.side_menu .nav-item:not(:first-child):hover {
   background-color: #FBFAFF;
   border-radius: 6px;
 }
@@ -75,3 +76,6 @@ body {
 .log-content .log-item .log-icon.check{
   color: #00AC4F;
 }
+
+/* Charts */
+
