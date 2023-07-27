@@ -79,3 +79,11 @@ body {
 
 /* Charts */
 
+.card-item {
+  height: 400px;
+}
+
+.pizzaChartArea {
+  max-width: 350px;
+  max-height: 350px;
+}

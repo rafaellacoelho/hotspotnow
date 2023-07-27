@@ -3,11 +3,11 @@ feather.replace()
 
     let barChart = document.getElementById('barChart').getContext('2d');
     let pizzaChart = document.getElementById('pizzaChart').getContext('2d');
-    let doughnutChart = document.getElementById('barChart').getContext('2d');
+    let doughnutChart = document.getElementById('doughnutChart').getContext('2d');
 
     // image object
-    const image = new Image(8,8);
-    image.src = '../src/img/vector.png'
+    const image = new Image(12,12);
+    image.src = '../src/img/vector.svg'
 
     // BAR CHART
     const xValues = [
@@ -54,8 +54,8 @@ feather.replace()
             yAlign: 'bottom',
             usePointStyle: true,
             padding: {
-              x: 15,
-              y: 4
+              x: 16,
+              y: 6
             },
             callbacks: {
               title: function() {
@@ -63,7 +63,7 @@ feather.replace()
               },
               labelPointStyle: (context) => {
                 return {
-                  pointStyle: image,                  
+                  pointStyle: image,
                 }
               }
             },
@@ -123,6 +123,9 @@ feather.replace()
       options: {
         animation: {
           duration: 2000,
+        },        
+        layout: {
+          padding: 22,
         },
         plugins: {
           tooltip: {
@@ -162,13 +165,12 @@ feather.replace()
       }
     }
 
-    const DonnutChart = new Chart('DonnutChart', {
-      type: 'doughnut', //Declare the chart type
+    let DoughnutChart = new Chart('doughnutChart', {
+      type: 'doughnut', 
       data: {
-        labels: zValues, //Defines each segment
+        labels: zValues, 
         datasets: [{
-          data: zValues, //Determines segment size
-          //Color of each segment
+          data: zValues, 
           backgroundColor: [
             "#5A2357",
             "#9D3C72"],
@@ -178,6 +180,11 @@ feather.replace()
         animation: {
           duration: 2000,
         },
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
       },
       plugins: [doughnutLabel]
     });
