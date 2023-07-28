@@ -43,6 +43,7 @@ feather.replace()
       },
 
       options: {
+        maintainAspectRatio: false,
         animation: {
           duration: 2000,
         },
@@ -121,6 +122,7 @@ feather.replace()
         }],
       },
       options: {
+        maintainAspectRatio: false,
         animation: {
           duration: 2000,
         },        
@@ -174,9 +176,11 @@ feather.replace()
           backgroundColor: [
             "#5A2357",
             "#9D3C72"],
+            cutout: '90',
         }]
       },
       options: {
+        maintainAspectRatio: false,
         animation: {
           duration: 2000,
         },
