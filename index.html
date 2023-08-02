@@ -17,7 +17,8 @@
 </head>
 
 <body>
-  <header id="mySidebar" class="d-none d-md-block h-100 sidebar position-fixed p-2" >
+  <header id="mySidebar" class="d-none d-md-block h-100 sidebar position-fixed p-2" onmouseover="toggleSidebar()"
+  onmouseout="toggleSidebar()">
     <div class="sidemenu pb-5">
       <div class="logo border-bottom">
         <img src="src/img/logo.png" aria-label="Home" />
@@ -290,11 +291,21 @@
 
     <div class="row my-5 h-50 gap-3 gap-lg-0">
       <div class="col-lg-6 h-50">
-        <div class="px-4 py-3 d-flex align-items-center rounded-4 card-container">
-          <div class="card-item w-100 p-2">
+        <div class="p-3 d-flex align-items-center rounded-4 card-container overflow-auto">
+          <div class="card-item w-100 p-3">
             <h4 class="fs-6 mb-4 fw-bold">Log de atividades</h4>
 
-            <ul class="log-content p-0">
+            <ul class="log-content p-2">
+              <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
+                <div class="log-title">
+                  <span>@amandaalves</span>
+                </div>
+                <div class="log-info">
+                  <span>18/07/2023 às 19:46</span>
+                  <i data-feather="check-circle" class="mx-3 log-icon check"></i>
+                </div>
+              </li>
+
               <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
                 <div class="log-title">
                   <span>@amandaalves</span>

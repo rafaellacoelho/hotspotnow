@@ -189,23 +189,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 80%;
 }
 
-.chart-legend-item:first-child::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-color: #9D3C72;
-  border-radius: 6px;
-  margin-right: 6px;
-}
+/* SCROOL */
 
-.chart-legend-item:last-child::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-color: #5A2357;
-  ;
-  border-radius: 6px;
-  margin-right: 6px;
+::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
 }
