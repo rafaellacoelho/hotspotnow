@@ -33,6 +33,11 @@
   border-radius: 6px;
 }
 
+.sidebar .sidemenu .navbar-nav .menu-nav .nav-item,
+.sidebar .sidemenu .navbar-nav .profile .nav-item  {
+  cursor: pointer;
+}
+
 .sidebar .sidemenu .navbar-nav .menu-nav .nav-item .nav-link,
 .sidebar .sidemenu .navbar-nav .profile .nav-item .nav-link{
   color: #828282;
@@ -52,6 +57,59 @@
 .sidebar .sidemenu .navbar-nav .profile .nav-item:hover .nav-icon,
 .sidebar .sidemenu .navbar-nav .profile .nav-item:hover .nav-link {
   color: #70119C;
+}
+
+/*  SUBMENU */
+
+/* buttons  */
+
+.dashboard-tile .calendar {
+  background-color: #FBFAFF;
+  border-color: #BBAACC;
+}
+
+.dashboard-tile .calendar .calendar-icon {
+  width: 20px;
+  color: #7E7E7E;
+  stroke-width: 1;
+}
+
+.dashboard-tile .calendar input[type="date"] {
+  background: transparent;
+  font-size: 14px;
+}
+
+
+.dashboard-tile .calendar input[type="date"]:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.dashboard-tile .add-clients {
+  background-color: #70119C;  
+}
+
+.dashboard-tile .add-clients .add-icon {
+  color: #fff;
+}
+
+.dashboard-tile .add-clients button {
+  background: transparent;
+  color: #fff;
+}
+
+.dashboard-tile .add-clients button:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+/* Hide Calendar Icon In Chrome */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
 /* visits */
