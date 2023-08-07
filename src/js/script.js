@@ -1,6 +1,5 @@
 feather.replace()
 
-
 let barChart = document.getElementById('barChart').getContext('2d');
 let pizzaChart = document.getElementById('pizzaChart').getContext('2d');
 
