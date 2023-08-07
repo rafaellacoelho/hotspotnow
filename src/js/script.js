@@ -5,7 +5,7 @@ let pizzaChart = document.getElementById('pizzaChart').getContext('2d');
 
 // image object
 const image = new Image(12, 12);
-image.src = 'img/vector.svg'
+image.src = 'src/img/vector.svg'
 
 // BAR CHART
 const xValues = [
