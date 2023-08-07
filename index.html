@@ -13,19 +13,19 @@
 
   <script src="https://unpkg.com/feather-icons"></script>
 
-  
+
 </head>
 
 <body>
-  <header id="mySidebar" class="d-none d-md-block h-100 sidebar position-fixed p-2" onmouseover="toggleSidebar()"
-  onmouseout="toggleSidebar()">
-    <div class="sidemenu pb-5">
-      <div class="logo border-bottom">
-        <img src="src/img/logo.png" aria-label="Home" />
+  <header id="mySidebar" class="d-none d-md-block h-100 sidebar position-fixed p-2 overflow-y-scroll"
+    onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+    <div class="sidemenu">
+      <div class="logo border-bottom ">
+        <img src="src/img/logo.png" aria-label="Home" class="py-2 mb-2" />
       </div>
 
-      <nav class="navbar-nav mt-3 d-flex justify-content-between">
-        <ul class="nav nav-pills menu-nav p-1 gap-3" id="nav_accordion">
+      <nav class="navbar-nav d-flex justify-content-between">
+        <ul class="nav nav-pills menu-nav p-1 gap-2" id="nav_accordion">
           <li class="nav-item w-100">
             <a class="nav-link px-3" href="#" title="Dashboard">
               <i data-feather="bar-chart" class="nav-icon"></i>
@@ -34,83 +34,83 @@
           </li>
           <li class="nav-item w-100">
             <a href="#submenu_clients" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="users" class="nav-icon"></i> 
-              <span class="ms-1 d-none d-sm-inline">Clientes</span> 
+              <i data-feather="users" class="nav-icon"></i>
+              <span class="ms-1 d-none d-sm-inline">Clientes</span>
               <i data-feather="chevron-down"></i>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_clients" data-bs-parent="#menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Gerenciar conta</span> 
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Voucher</span>
-                    </a>
-                </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Gerenciar conta</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Voucher</span>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item w-100">
             <a href="#submenu_modules" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="map" class="nav-icon"></i> 
-              <span class="ms-1 d-none d-sm-inline">Módulos</span> 
+              <i data-feather="map" class="nav-icon"></i>
+              <span class="ms-1 d-none d-sm-inline">Módulos</span>
               <i data-feather="chevron-down"></i>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_modules" data-bs-parent="#menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Pesquisa</span> 
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Marketing</span>
-                    </a>
-                </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Pesquisa</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Marketing</span>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item w-100">
             <a href="#submenu_report" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="layers" class="nav-icon"></i> 
-              <span class="ms-1 d-none d-sm-inline">Relatório</span> 
+              <i data-feather="layers" class="nav-icon"></i>
+              <span class="ms-1 d-none d-sm-inline">Relatório</span>
               <i data-feather="chevron-down"></i>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_report" data-bs-parent="#menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Extrato conexão</span> 
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Resumo Conexão</span>
-                    </a>
-                </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Extrato conexão</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Resumo Conexão</span>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item w-100">
             <a href="#submenu_securite" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="lock" class="nav-icon"></i> 
-              <span class="ms-1 d-none d-sm-inline">Segurança</span> 
-              <i data-feather="chevron-down"></i> 
+              <i data-feather="lock" class="nav-icon"></i>
+              <span class="ms-1 d-none d-sm-inline">Segurança</span>
+              <i data-feather="chevron-down"></i>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_securite" data-bs-parent="#menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Usuários</span> 
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-0"> 
-                      <span class="d-none d-sm-inline">Alterar senha</span>
-                    </a>
-                </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Usuários</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-0">
+                  <span class="d-none d-sm-inline">Alterar senha</span>
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
 
-        <ul class="nav nav-pills profile p-1 gap-3">
+        <ul class="nav nav-pills profile p-1 gap-2 mt-4">
           <li class="nav-item w-100">
             <a href="#" class="nav-link px-3">
               <i data-feather="refresh-cw" class="nav-icon"></i>
@@ -135,31 +135,77 @@
   </header>
 
   <main id="main" class="container-fluid ps-md-5 pb-3 col-xl-11 col-10 m-auto main">
-    <div class="dashboard-tile pt-4 d-flex justify-content-between align-items-center gap-5">
-      <h2 class="fw-normal fs-1 m-0">Dashboard</h2>
+    <div class="dashboard-header pt-4 d-flex justify-content-between align-items-center gap-5">
+      <h2 class="fw-normal fs-1 m-0 dashboard-title">Dashboard</h2>
 
       <div class="buttons_actions d-none d-md-flex justify-content-between w-100 ">
-        <div class="calendar rounded-3 border d-flex align-items-center px-3 py-2">
-          <i data-feather="calendar" class="me-2 calendar-icon"></i>
-          <input type="date" class="border-0">
+        <div class="calendar rounded-3 border d-flex align-items-center p-2">
+          <input type="date" class="border-0" id="date-input">
         </div>
-        <div class="add-clients rounded-3 d-flex align-items-center p-2">
-          <i data-feather="plus" class="add-icon" onclick="setDatepicker(this)"></i>
-          <button class="border-0">Adicionar cliente</button>
+
+        <div class="add-clients rounded-3 d-flex align-items-center">
+          
+          <button type="button" class="border-0 btn" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i data-feather="plus" class="add-icon" onclick="setDatepicker(this)"></i>Adicionar cliente</button>       
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content p-4">
+            <div class="modal-body">
+              <h2 class="mb-5">Cadastro Rápido</h2>
+
+              <form class="row g-3">
+                <div class="col-12">
+                  <label for="name" class="form-label">Nome completo</label>
+                  <input type="name" class="form-control" id="name">
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="col-md-6">
+                  <label for="telephone" class="form-label">Telefone</label>
+                  <input type="tel" class="form-control" id="telephone">
+                </div>
+                <div class="col-12">
+                  <div class="col-md-4">
+                    <label for="plan" class="form-label">Plano</label>
+                    <select id="plan" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="passowrd" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="passowrd">
+                </div>
+                <div class="col-md-6">
+                  <label for="confirmpassword" class="form-label">Confirmar senha</label>
+                  <input type="password" class="form-control" id="confirmpassword">
+                </div>
+                <div class="col-12 text-end ">
+                  <button type="submit" class="btn btn-modal-cancel me-3">Cancelar</button>
+                  <button type="submit" class="btn btn-modal-save">Salvar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
 
     <div class="row my-5">
       <div class="col-md-3">
-        <div class="px-4 py-3 mb-3 mb-md-0 rounded-4 card-container card-connections-container">
-          <div>
-            <p class="d-flex align-items-center mb-2">
+        <div class="px-3 py-3 mb-3 mb-md-0 rounded-4 card-container card-connections-container">
+            <p class="d-flex mb-2">
               <i data-feather="user-check" class="icon-card me-2"></i>Usuários
               Ativos
             </p>
             <h3 class="fs-3 fs-lg-2">242</h3>
-          </div>
         </div>
       </div>
 
@@ -194,7 +240,7 @@
           class="px-4 py-3 mb-3 mb-md-0 d-flex align-items-center rounded-4 card-container card-connections-container">
           <div>
             <p class="d-flex justify-content-center mb-2">
-              <i data-feather="wifi-off" class="icon-card me-2"></i> 
+              <i data-feather="wifi-off" class="icon-card me-2"></i>
               <span class="connections-title">Usuários Offline</span>
             </p>
             <h3 class="fs-3 fs-lg-2">126</h3>
@@ -267,9 +313,9 @@
       <div class="col-lg-4">
         <div class="px-4 py-3 rounded-4 card-container">
           <div class="card-item">
-            <h4 class="fs-6 fw-bold mb-4">Média de visitas</h4>
+            <h4 class="fs-6 fw-bold mb-4">A definir</h4>
 
-            
+
           </div>
         </div>
       </div>
@@ -279,9 +325,9 @@
           <div class="card-item">
             <h4 class="fs-6 fw-bold mb-4">Conexão por roteador</h4>
 
-            <div class="d-flex justify-content-center align-items-center">
-              <div class="chart-item">
-                <canvas id="pizzaChart"></canvas>
+            <div class="d-flex justify-content-center align-items-center chartCard">
+              <div class="chart-item chartBox w-100 h-75">
+                <canvas id="pizzaChart" class="pizzaChart"></canvas>
               </div>
             </div>
           </div>
@@ -292,7 +338,7 @@
     <div class="row my-5 h-50 gap-3 gap-lg-0">
       <div class="col-lg-6 h-50">
         <div class="p-3 d-flex align-items-center rounded-4 card-container overflow-auto">
-          <div class="card-item w-100 p-3">
+          <div class="card-item w-100 p-3 ">
             <h4 class="fs-6 mb-4 fw-bold">Log de atividades</h4>
 
             <ul class="log-content p-2">
@@ -373,7 +419,7 @@
       <div class="col-lg-6">
         <div class="px-4 py-3 rounded-4 card-container">
           <div class="card-item">
-            <h4 class="fs-6 fw-bold mb-4">Média de visitas</h4>
+            <h4 class="fs-6 fw-bold mb-4">Total de visitas</h4>
 
             <div class="chart-item">
               <canvas id="barChart"></canvas>
