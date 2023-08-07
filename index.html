@@ -17,26 +17,29 @@
 </head>
 
 <body>
-  <header id="mySidebar" class="d-none d-md-block h-100 sidebar position-fixed p-2 overflow-y-scroll"
-    onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+  <header id="mySidebar" class="d-none d-md-block h-100 sidebar position-fixed p-2 overflow-y-scroll" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
     <div class="sidemenu">
       <div class="logo border-bottom ">
         <img src="src/img/logo.png" aria-label="Home" class="py-2 mb-2" />
       </div>
 
       <nav class="navbar-nav d-flex justify-content-between">
-        <ul class="nav nav-pills menu-nav p-1 gap-2" id="nav_accordion">
+        <ul class="nav nav-pills menu-nav p-1 gap-2 mt-4" id="nav_accordion">
           <li class="nav-item w-100">
-            <a class="nav-link px-3" href="#" title="Dashboard">
+            <a class="nav-link px-3 " href="#" title="Dashboard">
               <i data-feather="bar-chart" class="nav-icon"></i>
               <span>Dashboard</span>
             </a>
           </li>
           <li class="nav-item w-100">
-            <a href="#submenu_clients" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="users" class="nav-icon"></i>
+            <a href="#submenu_clients" data-bs-toggle="collapse" class="nav-link px-3 d-flex justify-content-between">
+              <div class="nav-link-contents">
+                <i data-feather="users" class="nav-icon"></i>
               <span class="ms-1 d-none d-sm-inline">Clientes</span>
-              <i data-feather="chevron-down"></i>
+              </div>              
+              <div class="nav-link-chevron">
+                <i data-feather="chevron-down"></i>
+              </div>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_clients" data-bs-parent="#menu">
               <li class="nav-item">
@@ -52,10 +55,14 @@
             </ul>
           </li>
           <li class="nav-item w-100">
-            <a href="#submenu_modules" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="map" class="nav-icon"></i>
-              <span class="ms-1 d-none d-sm-inline">Módulos</span>
-              <i data-feather="chevron-down"></i>
+            <a href="#submenu_modules" data-bs-toggle="collapse" class="nav-link px-3 d-flex justify-content-between">
+              <div class="nav-link-contents">
+                <i data-feather="map" class="nav-icon"></i>
+                <span class="ms-1 d-none d-sm-inline">Módulos</span>
+              </div>              
+              <div class="nav-link-chevron">
+                <i data-feather="chevron-down"></i>
+              </div>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_modules" data-bs-parent="#menu">
               <li class="nav-item">
@@ -71,10 +78,14 @@
             </ul>
           </li>
           <li class="nav-item w-100">
-            <a href="#submenu_report" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="layers" class="nav-icon"></i>
+            <a href="#submenu_report" data-bs-toggle="collapse" class="nav-link px-3 d-flex justify-content-between">
+              <div class="nav-link-contents">
+                <i data-feather="layers" class="nav-icon"></i>
               <span class="ms-1 d-none d-sm-inline">Relatório</span>
-              <i data-feather="chevron-down"></i>
+              </div>              
+              <div class="nav-link-chevron">
+                <i data-feather="chevron-down"></i>
+              </div>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_report" data-bs-parent="#menu">
               <li class="nav-item">
@@ -90,10 +101,14 @@
             </ul>
           </li>
           <li class="nav-item w-100">
-            <a href="#submenu_securite" data-bs-toggle="collapse" class="nav-link px-3">
-              <i data-feather="lock" class="nav-icon"></i>
+            <a href="#submenu_securite" data-bs-toggle="collapse" class="nav-link px-3 d-flex justify-content-between">
+              <div class="nav-link-contents">
+                <i data-feather="lock" class="nav-icon"></i>
               <span class="ms-1 d-none d-sm-inline">Segurança</span>
-              <i data-feather="chevron-down"></i>
+              </div>              
+              <div class="nav-link-chevron">
+                <i data-feather="chevron-down"></i>
+              </div>
             </a>
             <ul class="collapse nav flex-column ms-1 submenu" id="submenu_securite" data-bs-parent="#menu">
               <li class="nav-item">

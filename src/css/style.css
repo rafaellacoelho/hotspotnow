@@ -7,7 +7,7 @@
 .sidebar {
   background-color: #F3F3FB;
   width: 80px;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
   transition: 0.5s;
   white-space: nowrap;
