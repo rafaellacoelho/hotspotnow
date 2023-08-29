@@ -201,18 +201,7 @@ let BarChart = new Chart('barChart2', {
     },
     plugins: {
       legend: {
-        position: 'right',
-        labels: {
-          boxWidth: 16,
-          boxHeight: 16,
-          useBorderRadius: true,
-          borderRadius: 5,
-          font: {
-            size: 14,
-            weight: 'normal',
-            family: 'Poppins',
-          },
-        },
+        display: false,
       },
       tooltip: {
         yAlign: 'bottom',
@@ -296,16 +285,29 @@ document.addEventListener("DOMContentLoaded", function(){
 }); 
 
 
-// MENU 
+// // MENU 
 
-var mini = true;
+/*==================== SHOW NAVBAR ====================*/
+const showMenu = (headerToggle, navbarId) => {
+  const toggleBtn = document.getElementById(headerToggle),
+      nav = document.getElementById(navbarId)
 
-function toggleSidebar() {
-  if (mini) {
-    document.getElementById("mySidebar").style.width = "250px";
-    this.mini = false;
-  } else {
-    document.getElementById("mySidebar").style.width = "85px";
-    this.mini = true;
+  // Validate that variables exist
+  if (headerToggle && navbarId) {
+      toggleBtn.addEventListener('click', () => {
+          // We add the show-menu class to the div tag with the nav__menu class
+          nav.classList.toggle('show-menu')
+    })
   }
 }
+showMenu('header-toggle', 'navbar')
+
+/*==================== LINK ACTIVE ====================*/
+const linkColor = document.querySelectorAll('.nav__link')
+
+function colorLink() {
+  linkColor.forEach(l => l.classList.remove('active'))
+  this.classList.add('active')
+}
+
+linkColor.forEach(l => l.addEventListener('click', colorLink))
