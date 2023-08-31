@@ -313,3 +313,17 @@ function colorLink() {
 }
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+// Skeleton
+
+const calendar = document.getElementById(date-input);
+
+var valor = calendar.value;
+
+console.log(valor);
+
+window.onload = () => {
+  calendar.onload = () => {
+    document.querySelector('.teste').classList.remove('loading');
+  }
+}
