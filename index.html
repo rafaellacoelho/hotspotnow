@@ -29,49 +29,56 @@
 
           <div class="add-clients rounded-3 d-flex align-items-center">
 
-            <button type="button" class="border-0 btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                data-feather="plus" class="add-icon" onclick="setDatepicker(this)"></i>Adicionar cliente</button>
+            <button type="button" class="border-0 btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i data-feather="plus" class="add-icon" onclick="setDatepicker(this)"></i>
+              Adicionar cliente
+            </button>
           </div>
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
               <div class="modal-content p-4">
                 <div class="modal-body">
                   <h2 class="mb-5">Cadastro Rápido</h2>
 
-                  <form class="row g-3">
+                  <form class="row g-3" id="form">
                     <div class="col-12">
                       <label for="name" class="form-label">Nome completo</label>
-                      <input type="name" class="form-control" id="name">
+                      <input type="name" class="form-control required" id="name" oninput="nameValidate()">
+                      <span class="span-required">Por favor informe o nome</span>
                     </div>
                     <div class="col-md-6">
                       <label for="email" class="form-label">E-mail</label>
-                      <input type="email" class="form-control" id="email">
+                      <input type="email" class="form-control required" id="email" oninput="emailValidate()">
+                      <span class="span-required">Por favor informe o e-mail</span>
                     </div>
                     <div class="col-md-6">
                       <label for="telephone" class="form-label">Telefone</label>
-                      <input type="tel" class="form-control" id="telephone">
+                      <input type="tel" class="form-control required" id="telephone" oninput="telefoneValidate()">
+                      <span class="span-required">Por favor informe o telefone</span>
                     </div>
                     <div class="col-12">
                       <div class="col-md-4">
                         <label for="plan" class="form-label">Plano</label>
-                        <select id="plan" class="form-select">
+                        <select id="plan" class="form-select required">
                           <option selected>Choose...</option>
                           <option>...</option>
                         </select>
+                        <span class="span-required">Por favor informe o Plano</span>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <label for="passowrd" class="form-label">Senha</label>
-                      <input type="password" class="form-control" id="passowrd">
+                      <input type="password" class="form-control required" id="passowrd" oninput="mainPasswordValidate()">
+                      <span class="span-required">Por favor informe a senha</span>
                     </div>
                     <div class="col-md-6">
                       <label for="confirmpassword" class="form-label">Confirmar senha</label>
-                      <input type="password" class="form-control" id="confirmpassword">
+                      <input type="password" class="form-control required" id="confirmpassword" oninput="comparePassword()">
+                      <span class="span-required">As senhas devem ser iguais</span>
                     </div>
                     <div class="col-12 text-end ">
-                      <button type="submit" class="btn btn-modal-cancel me-3">Cancelar</button>
+                      <button type="button" class="btn btn-modal-cancel me-3" data-dismiss="modal">Cancelar</button>
                       <button type="submit" class="btn btn-modal-save">Salvar</button>
                     </div>
                   </form>
@@ -283,7 +290,7 @@
                   <canvas id="barChart2"></canvas>
                 </div>
 
-                <div class="chart-item chart-legend mt-3 col-auto col-md-4">
+                <div class="chart-item chart-legend col-auto col-md-4">
                   <ul class="chart-legend_items p-0 m-0 d-flex flex-row flex-md-column justify-content-between gap-2">
                     <li class="chart-legend-item d-flex align-items-center list-unstyled mb-2 pb-4 flex-wrap">
                       Respondidas</li>

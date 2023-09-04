@@ -233,9 +233,9 @@
               <i data-feather="user-check" class="icon-card me-2"></i>Usuários
               Ativos
             </p>
-            <p class="fs-3 fs-lg-2 mb-0 b-md-2">
-              0
-            </p>
+            <div class="d-flex justify-content-center align-items-center h-75">
+              <div class="loader loader-card"></div>
+            </div>
           </div>
         </div>
 
@@ -246,7 +246,9 @@
               <i data-feather="user-x" class="icon-card me-2"></i> Usuários
               Inativos
             </p>
-            <p class="fs-3 fs-lg-2 mb-0 b-md-2">0</p>
+            <div class="d-flex justify-content-center align-items-center h-75">
+              <div class="loader loader-card"></div>
+            </div>
           </div>
         </div>
 
@@ -257,7 +259,9 @@
               <i data-feather="wifi" class="icon-card me-2"></i> Usuários
               Online
             </p>
-            <p class="fs-3 fs-lg-2 mb-0 b-md-2 ">0</p>
+            <div class="d-flex justify-content-center align-items-center h-75">
+              <div class="loader loader-card"></div>
+            </div>
           </div>
         </div>
 
@@ -268,7 +272,9 @@
               <i data-feather="wifi-off" class="icon-card me-2"></i>
               <span class="connections-title">Usuários Offline</span>
             </p>
-            <p class="fs-3 fs-lg-2 mb-0 b-md-2">0</p>
+            <div class="d-flex justify-content-center align-items-center h-75">
+              <div class="loader loader-card"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -280,18 +286,8 @@
             <div class="card-item p-1 p-md-3">
               <h4 class="fs-6 fw-bold mb-4">Total de visitas</h4>
 
-              <div class="d-flex flex-column flex-md-row h-100 gap-0 gap-md-2 teste loading">
-                <div class="chart-item col-auto col-md-8">
-                  <canvas id="barChart2"></canvas>
-                </div>
-
-                <div class="chart-item chart-legend col-auto col-md-4">
-                  <ul class="chart-legend_items p-0 m-0 d-flex flex-row flex-md-column justify-content-between gap-2">
-                    <li class="chart-legend-item d-flex align-items-center list-unstyled mb-2 pb-4 flex-wrap">
-                      Respondidas</li>
-                    <li class="chart-legend-item d-flex list-unstyled flex-wrap">Ignoradas</li>
-                  </ul>
-                </div>
+              <div class="d-flex justify-content-center align-items-center h-75">
+                <div class="loader"></div>
               </div>
             </div>
           </div>
@@ -302,57 +298,9 @@
             <div class="card-item p-1 p-md-3">
               <h4 class="fs-6 mb-4 fw-bold">Visitantes recentes</h4>
 
-              <ul class="ps-2 mt-5 teste loading">
-                <li class="d-flex justify-content-between mb-2">
-                  <div class="rank-info">
-                    <span class="rank-info-position me-2">1°</span>
-                    <span class="rank-info-title">amandaalves</span>
-                  </div>
-                  <div class="rank-total">
-                    <span>15x</span>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between pt-3 mb-2">
-                  <div class="rank-info">
-                    <span class="rank-info-position me-2">2°</span>
-                    <span class="rank-info-title">reginasantos</span>
-                  </div>
-                  <div class="rank-total">
-                    <span>12x</span>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between pt-3 mb-2">
-                  <div class="rank-info">
-                    <span class="rank-info-position me-2">3°</span>
-                    <span class="rank-info-title">antoniopereira</span>
-                  </div>
-                  <div class="rank-total">
-                    <span>11x</span>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between pt-3 mb-2">
-                  <div class="rank-info">
-                    <span class="rank-info-position me-2">4°</span>
-                    <span class="rank-info-title">hugosilva</span>
-                  </div>
-                  <div class="rank-total">
-                    <span>9x</span>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between pt-3">
-                  <div class="rank-info">
-                    <span class="rank-info-position me-2">5°</span>
-                    <span class="rank-info-title">fernandosouza</span>
-                  </div>
-                  <div class="rank-total">
-                    <span>5x</span>
-                  </div>
-                </li>
-              </ul>
+              <div class="d-flex justify-content-center align-items-center h-75">
+                <div class="loader"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -362,10 +310,8 @@
             <div class="card-item p-1 p-md-3">
               <h4 class="fs-6 fw-bold mb-4">Conexão por roteador</h4>
 
-              <div class="teste loading">
-                <div class="chart-item">
-                  <canvas id="pizzaChart" class="pizzaChart"></canvas>
-                </div>
+              <div class="d-flex justify-content-center align-items-center h-75">
+                <div class="loader"></div>
               </div>
             </div>
           </div>
@@ -378,68 +324,9 @@
             <div class="card-item w-100 p-1 p-md-3">
               <h4 class="fs-6 mb-4 fw-bold">Log de atividades</h4>
 
-              <ul class="log-content p-2 teste loading">
-                <li
-                  class="d-flex justify-content-between align-items-center py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
-                  <div class="log-title">
-                    <span>@amandaalves</span>
-                  </div>
-                  <div class="log-info d-flex align-items-center gap-2">
-                    <span>18/07/2023 às 19:46</span>
-                    <i data-feather="check-circle" class="mx-0 mx-md-3 log-icon check"></i>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
-                  <div class="log-title">
-                    <span>@amandaalves</span>
-                  </div>
-                  <div class="log-info d-flex align-items-center gap-2">
-                    <span>18/07/2023 às 19:46</span>
-                    <i data-feather="check-circle" class="mx-0 mx-md-3 log-icon check"></i>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
-                  <div class="log-title">
-                    <span>@amandaalves</span>
-                  </div>
-                  <div class="log-info d-flex align-items-center gap-2">
-                    <span>18/07/2023 às 19:46</span>
-                    <i data-feather="check-circle" class="mx-0 mx-md-3 log-icon check"></i>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
-                  <div class="log-title">
-                    <span>@amandaalves</span>
-                  </div>
-                  <div class="log-info d-flex align-items-center gap-2">
-                    <span>18/07/2023 às 19:46</span>
-                    <i data-feather="alert-circle" class="mx-0 mx-md-3 log-icon atention"></i>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
-                  <div class="log-title">
-                    <span>@amandaalves</span>
-                  </div>
-                  <div class="log-info d-flex align-items-center gap-2">
-                    <span>18/07/2023 às 19:46</span>
-                    <i data-feather="check-circle" class="mx-0 mx-md-3 log-icon check"></i>
-                  </div>
-                </li>
-
-                <li class="d-flex justify-content-between py-1 px-2 rounded-3 mb-3 list-unstyled log-item">
-                  <div class="log-title">
-                    <span>@amandaalves</span>
-                  </div>
-                  <div class="log-info d-flex align-items-center gap-2">
-                    <span>18/07/2023 às 19:46</span>
-                    <i data-feather="check-circle" class="mx-0 mx-md-3 log-icon check"></i>
-                  </div>
-                </li>
-              </ul>
+              <div class="d-flex justify-content-center align-items-center h-75">
+                <div class="loader"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -449,10 +336,8 @@
             <div class="card-item p-1 p-md-3">
               <h4 class="fs-6 fw-bold mb-4">Total de visitas</h4>
               
-              <div class="teste loading h-100">
-                <div class="chart-item">
-                  <canvas id="barChart"></canvas>
-                </div>
+              <div class="d-flex justify-content-center align-items-center h-75">
+                <div class="loader"></div>
               </div>
             </div>
           </div>
