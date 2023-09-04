@@ -330,68 +330,78 @@ window.onload = () => {
 
 // Validação Modal
 
-// const form = document.getElementById('form');
-// const campos = document.querySelectorAll('.required');
-// const spans = document.querySelectorAll('.span-required')
-// const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
-// const telefoneRegex = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/
+const form = document.getElementById('form');
+const campos = document.querySelectorAll('.required');
+const spans = document.querySelectorAll('.span-required')
 
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   nameValidate();
-//   emailValidate();
-//   telefoneValidate();
-//   mainPasswordValidate();
-//   comparePassword();
-// })
+const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+const telefoneRegex = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/
 
-// function setError(index) {
-//   campos[index].style.border = '2px solid #e63636'
-//   spans[index].style.display = 'block'
-// }
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  nameValidate();
+  emailValidate();
+  telefoneValidate();
+  planValidate();
+  mainPasswordValidate();
+  comparePassword();
+})
 
-// function removeError(index) {
-//   campos[index].style.border = ''
-//   spans[index].style.display = 'none'
-// }
+function setError(index) {
+  campos[index].style.border = '2px solid #e63636'
+  spans[index].style.display = 'block'
+}
 
-// function nameValidate() {
-//   if (campos[0].value.length < 3) {
-//     setError(0)
-//   } else {
-//     removeError(0)
-//   }
-// }
+function removeError(index) {
+  campos[index].style.border = ''
+  spans[index].style.display = 'none'
+}
 
-// function emailValidate() {
-//   if (!emailRegex.test(campos[1].value)) {
-//     setError(1)
-//   } else {
-//     removeError(1)
-//   }
-// }
+function nameValidate() {
+  if (campos[0].value === "") {
+    setError(0)
+  } else {
+    removeError(0)
+  }
+}
 
-// function telefoneValidate() {
-//   if (!telefoneRegex.test(campos[1].value)) {
-//     setError(2)
-//   } else {
-//     removeError(2)
-//   }
-// }
+function emailValidate() {
+  if (!emailRegex.test(campos[1].value || campos[1].value === "")) {
+    setError(1)
+  } else {
+    removeError(1)
+  }
+}
 
-// function mainPasswordValidate() {
-//   if (campos[5].value.length < 8) {
-//     setError(5)
-//   } else {
-//     removeError(5)
-//     comparePassword();
-//   }
-// }
+function telefoneValidate() {  
+  if (!telefoneRegex.test(campos[1].value)) {
+    setError(2)
+  } else {
+    removeError(2)
+  }
+}
 
-// function comparePassword() {
-//   if(campos[5].value == campos[6].value && campos[6].value.length >= 8) {
-//     removeError(6)
-//   } else {
-//     setError(6)
-//   }
-// }
+function planValidate() {
+  if (campos[3].selectedIndex == 0) {
+    setError(3)
+  } else {
+    removeError(3)
+  }
+}
+
+function mainPasswordValidate() {
+  if (campos[4].value.length < 8) {
+    setError(4)
+  } else {
+    removeError(4)
+    comparePassword();
+  }
+}
+
+function comparePassword() {
+  if(campos[4].value == campos[5].value && campos[5].value.length >= 8) {
+    removeError(5)
+  } else {
+    setError(5)
+  }
+}
