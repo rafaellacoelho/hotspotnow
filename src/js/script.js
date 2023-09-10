@@ -176,22 +176,22 @@ let BarChart = new Chart('barChart2', {
   data: {
     labels: labelsAdjusted,
     datasets: [{
-      label: 'Respondidos',
-      categoryPercentage: 0.9,
-      barPercentage: 0.6,
-      backgroundColor: "#D1D1F9",
-      borderRadius: 10,
-      data: media,
-    },
-    {
-      label: 'Ignorados',
-      categoryPercentage: 0.9,
-      barPercentage: 0.6,
-      backgroundColor: "#5A2357",
-      borderRadius: 10,
-      data: media2,
-    }
-   ],
+        label: 'Respondidos',
+        categoryPercentage: 0.9,
+        barPercentage: 0.6,
+        backgroundColor: "#D1D1F9",
+        borderRadius: 10,
+        data: media,
+      },
+      {
+        label: 'Ignorados',
+        categoryPercentage: 0.9,
+        barPercentage: 0.6,
+        backgroundColor: "#5A2357",
+        borderRadius: 10,
+        data: media2,
+      }
+    ],
   },
 
   options: {
@@ -256,33 +256,33 @@ let BarChart = new Chart('barChart2', {
 
 // Drop 
 
-document.addEventListener("DOMContentLoaded", function(){
-  document.querySelectorAll('.nav .nav_link').forEach(function(element){
-    
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.nav .nav_link').forEach(function (element) {
+
     element.addEventListener('click', function (e) {
 
       let nextEl = element.nextElementSibling;
-      let parentEl  = element.parentElement;	
+      let parentEl = element.parentElement;
 
-        if(nextEl) {
-            e.preventDefault();	
-            let mycollapse = new bootstrap.Collapse(nextEl);
-            
-            if(nextEl.classList.contains('show')){
-              mycollapse.hide();
-            } else {
-                mycollapse.show();
-                // find other submenus with class=show
-                var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
-                // if it exists, then close all of them
-                if(opened_submenu){
-                  new bootstrap.Collapse(opened_submenu);
-                }
-            }
+      if (nextEl) {
+        e.preventDefault();
+        let mycollapse = new bootstrap.Collapse(nextEl);
+
+        if (nextEl.classList.contains('show')) {
+          mycollapse.hide();
+        } else {
+          mycollapse.show();
+          // find other submenus with class=show
+          var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
+          // if it exists, then close all of them
+          if (opened_submenu) {
+            new bootstrap.Collapse(opened_submenu);
+          }
         }
+      }
     }); // addEventListener
   }) // forEach
-}); 
+});
 
 
 // // MENU 
@@ -290,15 +290,15 @@ document.addEventListener("DOMContentLoaded", function(){
 /*==================== SHOW NAVBAR ====================*/
 const showMenu = (headerToggle, navbarId) => {
   const toggleBtn = document.getElementById(headerToggle),
-      nav = document.getElementById(navbarId)
+    nav = document.getElementById(navbarId)
 
   // Validate that variables exist
   if (headerToggle && navbarId) {
-      toggleBtn.addEventListener('click', () => {
-          // We add the show-menu class to the div tag with the nav__menu class
-          nav.classList.toggle('show-menu')
-          //We change icon color
-          toggleBtn.classList.toggle('btn-white')
+    toggleBtn.addEventListener('click', () => {
+      // We add the show-menu class to the div tag with the nav__menu class
+      nav.classList.toggle('show-menu')
+      //We change icon color
+      toggleBtn.classList.toggle('btn-white')
     })
   }
 }
@@ -328,23 +328,57 @@ window.onload = () => {
   }
 }
 
+// Message 
+
+const toast = document.querySelector(".alerts");
+const closeAlert = document.querySelector(".close-alert");
+const progress = document.querySelector(".progress");
+
+
 // Validação Modal
+
+const container = document.getElementById("exampleModal");
+const modal = new bootstrap.Modal(container);
 
 const form = document.getElementById('form');
 const campos = document.querySelectorAll('.required');
-const spans = document.querySelectorAll('.span-required')
+const spans = document.querySelectorAll('.span-required');
 
-const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
-const telefoneRegex = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/
+const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+const telefoneRegex = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
+
+let isValidForm = false;
+
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
+
   nameValidate();
   emailValidate();
   telefoneValidate();
   planValidate();
   mainPasswordValidate();
   comparePassword();
+
+  modal.hide();
+
+  if (isValidForm) {
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    setTimeout(() => {
+      toast.classList.remove("active");
+    }, 5300)
+
+    closeAlert.addEventListener("click", () => {
+      toast.classList.remove("active");
+
+      setTimeout(() => {
+        progress.classList.remove("active");
+      }, 300)
+    })
+  }
+
 })
 
 function setError(index) {
@@ -358,40 +392,62 @@ function removeError(index) {
 }
 
 function nameValidate() {
+  isValidForm = true;
+
   if (campos[0].value === "") {
     setError(0)
+    isValidForm = false;
   } else {
     removeError(0)
   }
 }
 
 function emailValidate() {
+  isValidForm = true;
   if (!emailRegex.test(campos[1].value || campos[1].value === "")) {
     setError(1)
+    isValidForm = false;
   } else {
     removeError(1)
   }
 }
 
-function telefoneValidate() {  
-  if (!telefoneRegex.test(campos[1].value)) {
+function telefoneValidate() {
+  isValidForm = true;
+
+  campos[2].value = maskPhoneNumber(campos[2].value)
+
+  if (!telefoneRegex.test(campos[2].value || campos[2].value === "")) {
     setError(2)
+    isValidForm = false;
   } else {
     removeError(2)
   }
 }
 
+const maskPhoneNumber = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g, '')
+  value = value.replace(/(\d{2})(\d)/, "($1) $2")
+  value = value.replace(/(\d)(\d{4})$/, "$1-$2")
+  return value
+}
+
 function planValidate() {
+  isValidForm = true;
   if (campos[3].selectedIndex == 0) {
     setError(3)
+    isValidForm = false;
   } else {
     removeError(3)
   }
 }
 
 function mainPasswordValidate() {
+  isValidForm = true;
   if (campos[4].value.length < 8) {
     setError(4)
+    isValidForm = false;
   } else {
     removeError(4)
     comparePassword();
@@ -399,9 +455,13 @@ function mainPasswordValidate() {
 }
 
 function comparePassword() {
-  if(campos[4].value == campos[5].value && campos[5].value.length >= 8) {
+  isValidForm = true;
+
+  if (campos[4].value == campos[5].value && campos[5].value.length >= 8) {
     removeError(5)
   } else {
     setError(5)
+    isValidForm = false;
   }
 }
+

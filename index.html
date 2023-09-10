@@ -47,14 +47,14 @@
                       <input type="name" class="form-control required" id="name" oninput="nameValidate()">
                       <span class="span-required">Por favor informe o nome</span>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 form-content">
                       <label for="email" class="form-label">E-mail</label>
                       <input type="email" class="form-control required" id="email" oninput="emailValidate()">
                       <span class="span-required">Por favor informe o e-mail</span>
                     </div>
                     <div class="col-md-6">
                       <label for="telephone" class="form-label">Telefone</label>
-                      <input type="tel" class="form-control required" id="telephone" oninput="telefoneValidate()">
+                      <input type="tel" class="form-control required" id="telephone" oninput="telefoneValidate()" maxlength="15">
                       <span class="span-required">Por favor informe o telefone</span>
                     </div>
                     <div class="col-12">
@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-12 text-end ">
                       <button type="button" class="btn btn-modal-cancel me-3" data-dismiss="modal">Cancelar</button>
-                      <button type="submit" class="btn btn-modal-save">Salvar</button>
+                      <button type="submit" class="btn btn-modal-save teste-alert">Salvar</button>
                     </div>
                   </form>
                 </div>
@@ -91,6 +91,34 @@
         <div class="d-block d-md-none menu-toggle">
           <i data-feather="align-justify" id="header-toggle"></i>
         </div>
+
+        <div class="alerts bg-light rounded-3 position-absolute py-3">
+          <div class="alerts-content d-flex align-items-center">
+            <i data-feather="check-circle" class="alert-icon mx-3 icon-success"></i>
+
+            <div class="message d-flex flex-column">
+              <span class="fw-bold message-text">Success</span>
+              <span class="message-text">Your changes has been saved</span>
+            </div>
+
+            <i data-feather="x" class="mx-3 close-alert"></i>
+
+            <div class="progress position-absolute bottom-0 w-100"></div>
+          </div>
+        </div>
+
+        <!-- <div class="alerts position-absolute bottom-0 end-0 d-none">
+          <div class="alert d-flex justify-content-center align-items-center p-2 m-0">
+            <i data-feather="alert-triangle" class="alert-icon mx-3 icon-warning"></i>
+            <div class="alert-message pe-5">
+              <p class="m-0 fw-bold">Aviso</p>
+              <p class="m-0">Warning: This is a warning</p>
+            </div>
+            <div class="close-btn">
+              <i data-feather="x" class="mx-3"></i>
+            </div>
+          </div>
+        </div> -->
       </div>
     </header>
 
