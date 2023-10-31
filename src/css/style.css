@@ -516,7 +516,7 @@ animation: progress 5s linear forwards;
 }
 
 .search-status select,
-.search-create-date select,
+.search-create-date .search-create-date-content,
 .search-tags select,
 .search-input .search-input-select,
 .search-input .search-input-input,
@@ -547,6 +547,7 @@ animation: progress 5s linear forwards;
 }
 
 .search-input .search-input-input .icon,
+.search-create-date-content .icon,
 .export-sheet .icon {
   color: #383737;
   width: 20px;
@@ -554,11 +555,11 @@ animation: progress 5s linear forwards;
 }
 
 .search-status select,
-.search-create-date select,
+.search-create-date .search-create-date-content,
 .search-tags select,
-.export-sheet {  
+.export-sheet {   
   border-radius: 8px;
-  padding: 4px 32px 4px 14px;
+  padding: 4px 14px 4px 14px;
 }
 
 .search-status select:focus-visible,
@@ -566,7 +567,7 @@ animation: progress 5s linear forwards;
 .search-input input:focus-visible,
 .export-sheet select:focus-visible,
 .search-tags select:focus-visible,
-.search-create-date select:focus-visible {
+.search-create-date-content select:focus-visible {
   outline: none;
 }
 
@@ -655,15 +656,6 @@ thead tr th div .icon {
     td:not(:first-of-type) {
         min-width: 12.1rem;
     }
-}
-
-thead th:hover {
-    color: #6c00bd;
-}
-
-
-thead th.active,tbody td.active {
-    color: #6c00bd;
 }
 
 tbody tr td {
