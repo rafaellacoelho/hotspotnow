@@ -245,65 +245,97 @@
                     </div>
                     <div class="add-clients rounded-3 align-self-end">
                         <button type="button" class="border-0 btn" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal1">
+                            data-bs-target="#exampleModal2">
                             <i data-feather="plus" class="add-icon" onclick="setDatepicker(this)"></i>
                             Adicionar cliente
                         </button>
                     </div>
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+                    <div class="modal fade " id="exampleModal2" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-                            <div class="modal-content p-4">
+                            <div class="modal-content p-4 create_cliente">
                                 <div class="modal-body">
-                                    <h2 class="mb-5">Cadastro Rápido</h2>
+                                    <h4 class="mb-5">Informações para acesso</h4>
 
                                     <form class="row g-3" id="form">
-                                        <div class="col-12">
-                                            <label for="name" class="form-label">Nome completo</label>
-                                            <input type="name" class="form-control required" id="name"
-                                                oninput="nameValidate()">
-                                            <span class="span-required">Por favor informe o nome</span>
-                                        </div>
-                                        <div class="col-md-6 form-content">
-                                            <label for="email" class="form-label">E-mail</label>
-                                            <input type="email" class="form-control required" id="email"
-                                                oninput="emailValidate()">
-                                            <span class="span-required">Por favor informe o e-mail</span>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="telephone" class="form-label">Telefone</label>
-                                            <input type="tel" class="form-control required" id="telephone"
-                                                oninput="telefoneValidate()" maxlength="15">
-                                            <span class="span-required">Por favor informe o telefone</span>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="col-md-4">
-                                                <label for="plan" class="form-label">Plano</label>
-                                                <select id="plan" class="form-select required"
-                                                    onchange="planValidate()">
-                                                    <option selected>Choose...</option>
-                                                    <option>...</option>
-                                                </select>
-                                                <span class="span-required">Por favor informe o Plano</span>
+                                        <div class="group-1 row">
+                                            <div class="col-12">
+                                                <label for="name" class="form-label">Nome completo</label>
+                                                <input type="name" class="form-control required" id="name"
+                                                    oninput="nameValidate()">
+                                                <span class="span-required">Por favor informe o nome</span>
+                                            </div>
+                                            <div class="col-md-6 form-content mt-3">
+                                                <label for="email" class="form-label">E-mail</label>
+                                                <input type="email" class="form-control required" id="email"
+                                                    oninput="emailValidate()">
+                                                <span class="span-required">Por favor informe o e-mail</span>
+                                            </div>
+                                            <div class="col-md-6 mt-3">
+                                                <label for="document_number" class="form-label">Documento (CPF ou
+                                                    Passaporte)*</label>
+                                                <input type="text" class="form-control required" id="document_number"
+                                                    oninput="telefoneValidate()" maxlength="15">
+                                                <span class="span-required">Por favor informe o documento</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="passowrd" class="form-label">Senha</label>
-                                            <input type="password" class="form-control required" id="passowrd"
-                                                oninput="mainPasswordValidate()">
-                                            <span class="span-required">Por favor informe a senha</span>
+
+                                        <div class="group-2 row mt-5">
+                                            <div class="col-3">
+                                                    <label for="plan" class="form-label">País de nascimento</label>
+                                                    <select id="plan" class="form-select reqsuired"
+                                                        onchange="planValidate()">
+                                                        <option selected>Choose...</option>
+                                                        <option>Brasil</option>
+                                                        <option>Estados Unidos</option>
+                                                        <option>Reino Unido</option>
+                                                    </select>
+                                                    <span class="span-required">Por 
+                                            </div>
+                                            <div class="col-3">
+                                                <label for="passowrd" class="form-label">Endereço</label>
+                                                <input type="password" class="form-control required" id="passowrd"
+                                                    oninput="mainPasswordValidate()">
+                                                <span class="span-required">Por favor informe a senha</span>
+                                            </div>
+                                            <div class="col-3">
+                                                <label for="confirmpassword" class="form-label">Cidade</label>
+                                                <input type="password" class="form-control required"
+                                                    id="confirmpassword" oninput="comparePassword()">
+                                                <span class="span-required">As senhas devem ser iguais</span>
+                                            </div>
+                                            <div class="col-3">
+                                                <label for="confirmpassword" class="form-label">Estado </label>
+                                                <input type="password" class="form-control required"
+                                                    id="confirmpassword" oninput="comparePassword()">
+                                                <span class="span-required">As senhas devem ser iguais</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="confirmpassword" class="form-label">Telefone</label>
+                                                <input type="password" class="form-control required"
+                                                    id="confirmpassword" oninput="comparePassword()">
+                                                <span class="span-required">As senhas devem ser iguais</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="confirmpassword" class="form-label">Data de nascimento</label>
+                                                <input type="password" class="form-control required"
+                                                    id="confirmpassword" oninput="comparePassword()">
+                                                <span class="span-required">As senhas devem ser iguais</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="confirmpassword" class="form-label">Sexo</label>
+                                                <input type="password" class="form-control required"
+                                                    id="confirmpassword" oninput="comparePassword()">
+                                                <span class="span-required">As senhas devem ser iguais</span>
+                                            </div>                                            
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="confirmpassword" class="form-label">Confirmar senha</label>
-                                            <input type="password" class="form-control required" id="confirmpassword"
-                                                oninput="comparePassword()">
-                                            <span class="span-required">As senhas devem ser iguais</span>
-                                        </div>
+
                                         <div class="col-12 text-end ">
                                             <button type="button" class="btn btn-modal-cancel me-3"
                                                 data-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-modal-save teste-alert">Salvar</button>
+                                            <button type="submit"
+                                                class="btn btn-modal-save teste-alert">Salvar</button>
                                         </div>
                                     </form>
                                 </div>

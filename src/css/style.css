@@ -779,8 +779,18 @@ tbody tr td .icon-more {
 * Get free snippets on bootpen.com
 *******************************/
 
-  .modal-dialog {
-    height: 100vh;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
+ 
+
+
+  /* Create Cliente */
+
+  .create_cliente {
+    background: #FFF;
+  }
+
+  .create_cliente .group-1, 
+  .create_cliente .group-2 {
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 12px;
   }
